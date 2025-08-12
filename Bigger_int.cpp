@@ -183,6 +183,33 @@ BiggerInt BiggerInt::operator--()
     return *this;
 }
 
+BiggerInt BiggerInt::operator--(int)
+{
+    BiggerInt copy = *this;
+    for (int i = 0; i < int_lenght_; i++)
+    {
+        big_int_[i]--;
+    }
+    return copy;
+}
+
+int main()
+{
+
+    int arr1[5] = {1 ,2 ,3 ,4 ,5};
+    int arr2[4] = {6,7,8,9};
+
+    BiggerInt e1(arr1,5);
+    BiggerInt e2(arr2,4);
+
+    cout << "Array 1:";
+    e1.display();
+
+    cout << "Array 2:";
+    e2.display();
+    
+
+}
 
 
 
