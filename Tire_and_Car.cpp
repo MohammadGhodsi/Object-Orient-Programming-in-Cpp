@@ -1,7 +1,9 @@
 #include <iostream>
 using namespace std;
 
-class Tire {
+class Tire 
+
+{
 
     private:
         
@@ -74,7 +76,38 @@ Tire::~Tire()
 
 }
 
+class Car 
+{
 
+    private:
+
+        int* model;
+        string* company;
+        Tire* t1;
+
+    public:
+
+        Car(int m, string c, Tire& t)
+        {
+            this->model = new int;
+            this-> company = new string;
+            *model=m;
+            *company = c;
+            t1 = new Tire(t.getwidth() ,t.getaspectratio() , t.getdiamter());
+        
+        }
+        ~Car()
+        {
+            delete model, company , t1;
+        }
+
+        void Printcar()
+        {
+            cout << "Model :" << *model << "Company :" <<*company<< "   ";
+            t1->PrintTire();
+        }
+
+};
 
 
 
