@@ -114,6 +114,11 @@ int main()
 {
     Tire tNew (12,10,13);
     tNew.PrintTire();
+    endl(cout);
+    
+    Car cNew(2016,"Honda",tNew);
+    cNew.Printcar();
+    return 0;
 }
 
 
