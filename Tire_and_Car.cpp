@@ -23,7 +23,7 @@ class Tire
     void PrintTire()
     {
 
-        cout << "Width :" << *width << "Aspect ratio :" << *aspect_ratio << "Diameter" << *diameter;
+        cout << "Width :" << *width << "  Aspect ratio  :" << *aspect_ratio << "  Diameter  " << *diameter;
 
     }
 };
@@ -96,6 +96,7 @@ class Car
             t1 = new Tire(t.getwidth() ,t.getaspectratio() , t.getdiamter());
         
         }
+
         ~Car()
         {
             delete model, company , t1;
@@ -109,5 +110,10 @@ class Car
 
 };
 
+int main()
+{
+    Tire tNew (12,10,13);
+    tNew.PrintTire();
+}
 
 
