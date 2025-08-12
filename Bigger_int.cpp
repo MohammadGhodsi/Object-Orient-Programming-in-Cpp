@@ -15,7 +15,7 @@ class BiggerInt {
     ~BiggerInt();
 
     void display();
-    void setbig_int(int*);
+    void setbig_int_(int*);
     void setint_lenght_(int);
     int* getbig_int_();
     int getint_lenght_();
@@ -79,7 +79,7 @@ BiggerInt::BiggerInt(const BiggerInt& obj)
     }
 
     int_lenght_ = c.int_lenght_;
-    big_int_ = new int[int_lenght_]
+    big_int_ = new int[int_lenght_];
         
     for (int i = 0; i < int_lenght_; i++)
     {
@@ -94,6 +94,98 @@ BiggerInt::~BiggerInt()
 {
     delete[] big_int_;
 }
+
+void BiggerInt::display()
+{
+    if (int_lenght_ == 0)
+    {
+        cout<<"No value was assigned to this parameter!";
+    }
+
+    else
+    {
+        for (int i = 0; i < int_lenght_; i++)
+        {
+            cout<< big_int_[i];
+        }
+
+        cout<<endl;
+        
+    }
+
+
+}
+
+void BiggerInt::setbig_int_(int* big)
+{
+    big_int_ = big;
+}
+
+void BiggerInt::setint_lenght_(int len)
+
+{
+    int_lenght_ = len;
+}
+
+int* BiggerInt::getbig_int_()
+{
+    return big_int_;
+
+}
+
+int BiggerInt::getint_lenght_()
+{
+    return int_lenght_;
+}
+
+int& BiggerInt::operator[](int index)
+{
+    if (index >= int_lenght_)
+    {
+        cout<< "It is out of array index!";
+    }
+    exit(0);
+
+    return big_int_[index];
+
+}
+
+
+BiggerInt BiggerInt::operator++()
+{
+    for (int i = 0; i < int_lenght_; i++)
+    {
+        ++big_int_[i];
+    }
+
+    return *this;
+}
+
+
+BiggerInt BiggerInt::operator++(int)
+{
+    BiggerInt copy = *this;
+    for (int i = 0; i < int_lenght_; i++)
+    {
+        big_int_[i]++;
+    }
+
+    return copy;
+}
+
+BiggerInt BiggerInt::operator--()
+{
+    for (int i = 0; i < int_lenght_; i++)
+    {
+        --big_int_[i];
+    }
+
+    return *this;
+}
+
+
+
+
 
 
 
