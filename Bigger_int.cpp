@@ -207,7 +207,19 @@ int main()
 
     cout << "Array 2:";
     e2.display();
-    
+
+    cout << "Using pre-increment on Array 1:";
+    (++e1).display();
+
+    cout << "Using pre-increment on Array 2:";
+    (++e2).display();
+
+    cout << "After post-increment o Array 2:";
+    (e2++).display();
+
+    cout << "Using post-decrement on Array 1:";
+    (e2--).display();
+
 
 }
 
