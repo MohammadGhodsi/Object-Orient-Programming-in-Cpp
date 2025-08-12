@@ -21,6 +21,8 @@ class BiggerInt {
     int getint_lenght_();
     int& operator[](int);
 
+    BiggerInt 
+
 }
 
 
