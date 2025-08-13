@@ -63,7 +63,10 @@ class CurrentAccount : public Account
 
     }
 
-    void Account::Print
+    void Credit(float amount)
+    {
+        setAB(getAB() + amount)
+    }
 
     
 };
