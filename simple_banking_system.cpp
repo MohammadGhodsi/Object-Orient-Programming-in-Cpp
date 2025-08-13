@@ -47,8 +47,23 @@ public:
 class CurrentAccount : public Account
 {
     private:
-        SC , MB;  //SC = Service Charges (int) , MB = Minimum Balance (int)
-        
+       int SC , MB;  //SC = Service Charges (int) , MB = Minimum Balance (int)
+
+    public:
+        CurrentAccount()
+        {
+            SC = 100; //Default charge
+            MB = 1000; //Defualt minimum balance
+        }
+
+    void Print()
+    {
+        Account::Print(); //Overriding Print() class
+        cout << "Service Charges :" << SC << endl << MB << endl;
+
+    }
+
+    void 
 
     
 };
