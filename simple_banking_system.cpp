@@ -4,7 +4,7 @@ using namespace std;
 class Account
 {
 private:
-    int AN, AB;
+    int AN, AB; // AN = Account Number (integer) , AB = Account Balance (integer)
 public:
    
     int getAN()
@@ -44,5 +44,12 @@ public:
 
 };
 
+class CurrentAccount : public Account
+{
+    private:
+        SC , MB;  //SC = Service Charges (int) , MB = Minimum Balance (int)
+        
 
+    
+};
 
