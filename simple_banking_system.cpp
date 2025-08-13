@@ -65,9 +65,77 @@ class CurrentAccount : public Account
 
     void Credit(float amount)
     {
-        setAB(getAB() + amount)
+        setAB(getAB() + amount);
     }
 
+    void Debit(float amount)
+    {
+        if (amount <= getAB())
+        {
+            setAB(getAB() - amount);
+        }
+
+        if (getAB() < MB) 
+        {
+            setAB(getAB() - SC);
+        }
+    }
+
+    ~CurrentAccount()
+    {
+        cout << "Current Account has been removed!" << endl;
+    }
+
+    
+    class SavingAccount : public Account
+    {
+        private:
+            int Interest_rate; 
+
+        public :
+            SavingAccount()
+            {
+                Interest_rate = 5;
+            }    
+        
+        void Print()
+        {
+            Account::Print();
+            cout << "Interest Rate :" << Interest_rate << endl;
+
+        }    
+
+        void Credit(float amount)
+        {
+            setAB(getAB() + amount);
+        }
+
+        void Debit(float amount)
+        {
+
+            if (amount <= getAB())
+            {
+                setAB(getAB() - amount);
+            }
+
+        }
+
+        ~SavingAccount()
+        {
+            cout<< "Saving account destroyed !" << endl;
+        }
+
+
+        int main()
+        {
+
+            Account
+
+        }
+
+
+
+    }
     
 };
 
