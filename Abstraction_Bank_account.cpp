@@ -37,3 +37,90 @@ class Account
 
 };
 
+
+
+class CurrentAccount : public Account
+{
+    private:
+        float servicecharges;
+        float minBalance; 
+    
+    public:
+        CurrentAccount(int num, float balance, float charges, float minBal) : Account(num,balance) , servicecharges(charges) , minBalance(minBal)
+        {
+
+        }
+       
+    void Debit(float amount) override
+    {
+        if (amount <= getAccountBalance())
+        {
+            accountBalance -= amount;
+        }
+
+        else
+        {
+            cout << "Insufficient balance!" << endl;
+        }
+
+    }
+
+    void Credit(float amount) override
+    {
+        accountBalance += amount;
+        
+        if (accountBalance <= minBalance)
+        {
+            accountBalance -= servicecharges;
+        }
+ 
+    }
+
+    void Print() override
+    {
+        Account::Print();
+        cout << "Minimum balance in the bank" << minBalance << endl;
+        cout << "Service charges fee" << servicecharges << endl;
+    }
+
+    class SavingAccount : public Account
+    {
+        private:
+            float interestRate;
+
+        public:
+            SavingAccount(int num, float balance , float rate) : Account(num , balance) , interestRate(rate) 
+            {
+
+            }
+
+        void Debit(float amount) override
+        {
+            if (amount <= getAccountBalance())
+            {
+                accountBalance -= amount
+            }
+            else
+            {
+                cout << "Insufficient balance" << endl;
+            }
+
+        }
+
+        void Credit(float amount) override
+        {
+            accountBalance += amount;
+        }
+
+        void Print() override
+        {
+            Account::Print();
+            cout << "Interest Rate :" << interestRate << endl;
+        }
+
+    }
+
+};
+
+
+
