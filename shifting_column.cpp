@@ -58,7 +58,30 @@ int main()
     for (int i=0 ; i< rows; ++i)
     {
         dynamic_matrix[i] = new int[columns];
+        for (int j = 0; j < columns; ++j)
+        {
+            dynamic_matrix[i][j] = matrix[i][j];
+        }
     }
+
+    cout<< "Range of matrix:" << range(dynamic_matrix , rows, columns) << endl;
+
+    shift_columns(dynamic_matrix , rows , columns);
+
+    cout << "Shifted matrix:"<< endl;
+
+    for (int i = 0; i < rows; ++i)
+    {
+        for (int j = 0; j < columns; ++j)
+        {
+            cout << dynamic_matrix[i][j] << "  ";
+        }
+
+        cout << endl;
+        
+    }
+    
+
 
     
 }
