@@ -31,6 +31,32 @@ T range(T* array , int rows , int columns)
 
 }
 
+template <typename T>
+void shift_columns(T* array , int rows , int columns)
+{
+
+    for (int i = 0; i < rows; ++i)
+    {
+        T temp = array[i][0];
+        for (int j=0; j < columns - 1; ++j)
+        {
+            array[i][j] = array[i][j + 1];
+        }
+
+        array[i][columns - 1] = temp;
+
+    }
+    
+}
+
+int main()
+{
+    const int rows = 3;
+    const int columns = 3;
+
+    
+}
+
 
 
 
