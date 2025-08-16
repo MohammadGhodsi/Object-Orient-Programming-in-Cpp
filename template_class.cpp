@@ -2,35 +2,7 @@
 
 using namespace std;
 
-template <class T, int N>
-class sequence
-{
-    private:
-        T memblock[N];
-
-    public:
-        void setmember(int x, T value)
-        {
-
-        }
-
-        T getmember(int x)
-        {
-            return memblock[x];
-        }
-
-};
-
-
-int main()
-{
-
-    sequence<int, >
-
-
-}
-
-
+template <class T , int N>
 
 
 
