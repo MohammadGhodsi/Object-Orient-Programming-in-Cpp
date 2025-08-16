@@ -11,9 +11,24 @@ class sequence
     public:
         void setmember(int x, T value)
         {
-            
+
         }
+
+        T getmember(int x)
+        {
+            return memblock[x];
+        }
+
 };
+
+
+int main()
+{
+
+    sequence<int, >
+
+
+}
 
 
 
