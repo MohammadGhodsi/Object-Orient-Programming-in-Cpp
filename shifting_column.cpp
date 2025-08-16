@@ -4,7 +4,7 @@ using namespace std;
 
 template <typename T>
 
-T range(T* array , int rows , int columns)
+T range(T** array , int rows , int columns)
 {
     T min = array[0][0];
     T max = array[0][0];
@@ -32,7 +32,7 @@ T range(T* array , int rows , int columns)
 }
 
 template <typename T>
-void shift_columns(T* array , int rows , int columns)
+void shift_columns(T** array , int rows , int columns)
 {
 
     for (int i = 0; i < rows; ++i)
