@@ -38,7 +38,6 @@ class Account
 };
 
 
-
 class CurrentAccount : public Account
 {
 private:
@@ -118,6 +117,43 @@ public:
         }
 
     };
+
+    class BasicAccount : public Account
+    {
+
+    public:
+        BasicAccount(int num , float balance) : Account(num , balance) {}
+
+        void Debit(float amount) override
+        {
+            if (amount <= getAccountBalance())
+            {
+                accountBalance -= amount;
+            }
+
+            else
+            {
+                cout << "Insufficient balance in the bank" << endl;
+            }
+        }
+
+        void Credit(float amount) override
+        {
+            accountBalance += amount;
+        }
+
+
+    };
+
+int main()
+{
+
+    Account* a
+
+
+}
+
+
 
 
 
