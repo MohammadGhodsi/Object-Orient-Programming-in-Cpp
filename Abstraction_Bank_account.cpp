@@ -81,6 +81,7 @@ public:
         cout << "Service charges fee" << servicecharges << endl;
     }
 
+};
     class SavingAccount : public Account
     {
         private:
@@ -116,9 +117,7 @@ public:
             cout << "Interest Rate :" << interestRate << endl;
         }
 
-    }
-
-};
+    };
 
 
 
