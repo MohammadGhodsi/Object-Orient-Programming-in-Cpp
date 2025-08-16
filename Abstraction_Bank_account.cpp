@@ -41,15 +41,13 @@ class Account
 
 class CurrentAccount : public Account
 {
-    private:
-        float servicecharges;
-        float minBalance; 
+private:
+    float servicecharges;
+    float minBalance; 
     
-    public:
-        CurrentAccount(int num, float balance, float charges, float minBal) : Account(num,balance) , servicecharges(charges) , minBalance(minBal)
-        {
-
-        }
+public:
+    CurrentAccount(int num, float balance, float charges, float minBal) : Account(num,balance) , servicecharges(charges) , minBalance(minBal)
+    {}
        
     void Debit(float amount) override
     {
