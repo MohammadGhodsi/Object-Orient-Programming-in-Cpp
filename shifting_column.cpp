@@ -14,11 +14,31 @@ T range(T* array , int rows , int columns)
     {
         for (int j=0; j<columns;++j)
         {
-            if(array[i][j])
+            if(array[i][j] < min)
+            {
+                min = array[i][j];
+            }
+
+            if(array[i][j] > max)
+            {
+                max = array[i][j];
+            }
+
         }
     }
 
-};
+    return ((max - min) / static_cast<T>(4)) + min;
+
+}
+
+
+
+
+
+
+
+
+
 
 
 
