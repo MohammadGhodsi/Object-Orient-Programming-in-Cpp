@@ -80,7 +80,17 @@ int main()
         cout << endl;
         
     }
-    
+
+    // Deleting the memory of matrixes
+
+    for (int i=0; i <rows; ++i)
+    {
+        delete[] dynamic_matrix[i];
+    }
+
+    delete[] dynamic_matrix;
+
+    return 0;
 
 
     
