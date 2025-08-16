@@ -98,7 +98,7 @@ class CurrentAccount : public Account
         {
             if (amount <= getAccountBalance())
             {
-                accountBalance -= amount
+                accountBalance -= amount;
             }
             else
             {
