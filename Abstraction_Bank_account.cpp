@@ -148,8 +148,18 @@ public:
 int main()
 {
 
-    Account* a
+    Account* accounts[4];
+    accounts[0] = new CurrentAccount(456,2000,50,500);
+    accounts[1] = new SavingAccount(789,3000,5);
+    accounts[2] = new BasicAccount(123,1000);
 
+    for (int i=0;i<3;++i)
+    {
+        accounts[i]->Print();
+        delete accounts[i];
+    }
+
+    return 0;
 
 }
 
