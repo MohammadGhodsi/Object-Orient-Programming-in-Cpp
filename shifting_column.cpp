@@ -53,6 +53,12 @@ int main()
 {
     const int rows = 3;
     const int columns = 3;
+    int matrix[rows][columns] = {{1,2,3} , {4,5,6},{7,8,9}};
+    int** dynamic_matrix = new int* [rows];
+    for (int i=0 ; i< rows; ++i)
+    {
+        dynamic_matrix[i] = new int[columns];
+    }
 
     
 }
